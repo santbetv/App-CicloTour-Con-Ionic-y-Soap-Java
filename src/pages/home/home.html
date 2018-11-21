@@ -1,0 +1,105 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Municipios
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <!--<ion-item style="background: paleturquoise; ">
+    <ion-label>Origen</ion-label>
+    <ion-select style="background-color: papayawhip" okText="Buscar Origen" cancelText="Cancelar">
+      <ion-option *ngFor="let origen of newMunicipios">{{origen.nombre}}</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item style="background: paleturquoise; ">
+    <ion-label>Destino</ion-label>
+    <ion-select style="background-color: papayawhip" okText="Buscar Destino" cancelText="Cancelar">
+      <ion-option *ngFor="let destino of newMunicipios">{{destino.nombre}}</ion-option>
+    </ion-select>
+  </ion-item>-->
+
+  <!--<ion-item style="background: paleturquoise; ">
+    <ion-label>Lista de Vertices</ion-label>
+    <ion-select style="background-color: papayawhip" cancelText="Cerrar">
+      <ion-option *ngFor="let listaV of listaDeVerticesArray">{{listaV}}</ion-option>
+    </ion-select>
+  </ion-item>-->
+
+  <!--<ion-list reorder="true">
+     <ion-item-sliding *ngFor="let municipio of newMunicipios; let i= index">
+      <ion-item>
+        <ion-avatar item-start>
+          <img [src]="municipio.imagen">
+        </ion-avatar>
+        <h2>{{municipio.nombre}}</h2>
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)="borrar_municipio(i)">
+          <ion-icon name="trash"></ion-icon>
+          Borrar
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <ion-item-sliding *ngFor="let item of municipios">
+      <ion-item>
+        <ul>
+          <li>
+            <h2>{{ "Municipio: "+ item.nombreMunicipio}}</h2>
+          </li>
+          <li>
+            <h2>{{ "Departamento: "+ item.departamentoId.nombre}}</h2>
+          </li>
+        </ul>
+      </ion-item>
+
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)="deleteMunicipio(item._id)">
+          <ion-icon name="trash"></ion-icon>
+          Borrar
+        </button>
+      </ion-item-options>
+
+      <ion-item-options side="left">
+        <button ion-button color="primary" (click)="editarMunicipio(item._id)">
+          <ion-icon name="md-refresh"></ion-icon>
+          Editar
+        </button>
+      </ion-item-options>
+
+    </ion-item-sliding>
+  </ion-list>-->
+
+  <!--<ion-fab right bottom>
+    <button ion-fab class="fixed" (click)="newMunicipio()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>-->
+
+  <ion-img style="width: 350px; height: 180px;" src="https://2.bp.blogspot.com/-Q-uWmE7E7Sk/V2iLtLpLxVI/AAAAAAAABCM/5_FuE9g8_U85ArJ0JvOAiS86MEGQNIxPgCLcB/s1600/CUATRO%2BCOLORES.png"></ion-img>
+
+  <p>Bienvenido a la pagina principal de Ciclo Tour, Encontra las distintas maneras de llegar a su destino con nuesta
+    apliación.</p>
+    
+  <button ion-button color="primary" block (click)="irMenu()">MENU</button>
+  <button ion-button color="secondary" block (click)="municipioOrigen()">Municipio Origen</button>
+  <button ion-button color="danger" block (click)="municipioDestino()">Municipio Destino</button>
+  <button ion-button color="secondary" block (click)="calcularRutaCorta()" [menuToggle]="activeM">Ruta Corta</button>
+
+
+  <ion-list reorder="true">
+    <ion-item-sliding *ngFor="let RutaCorta of listaDeRutaCortaArray">
+      <ion-item>
+        <ul>
+          <li>
+            <h2>{{RutaCorta}}</h2>
+          </li>
+        </ul>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>

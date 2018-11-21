@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Crear Arista</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <form [formGroup]="form">
+    <ion-list>
+      <button ion-button color="secondary" block (click)="municipioOrigen()">Municipio Origen</button>
+      <button ion-button color="danger" block (click)="municipioDestino()">Municipio Destino</button>
+      <ion-item>
+        <ion-label fixed>Peso</ion-label>
+        <ion-input formControlName="peso" type="text"></ion-input>
+      </ion-item>
+      <button ion-button color="secondary" block (click)="crearRuta()">Crear Ruta</button>
+    </ion-list>
+  </form>
+
+</ion-content>

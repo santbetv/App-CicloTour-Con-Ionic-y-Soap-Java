@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Editar Municipio</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-content>
+    <form (submit)="editarVertice()" [formGroup]="form">
+      <ion-list>
+        <ion-item>
+          <ion-label fixed>New Municipio</ion-label><br>
+          <ion-input formControlName="nombreMunicipio" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>New Posx</ion-label>
+          <ion-input formControlName="posx" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>New Posy</ion-label>
+          <ion-input formControlName="posy" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>New Descripcion</ion-label>
+          <ion-input formControlName="descripcion" type="text"></ion-input>
+        </ion-item>
+        <div padding>
+          <button ion-button block type="submit">Editar Municipio</button>
+        </div>
+      </ion-list>
+    </form>
+
+  </ion-content>

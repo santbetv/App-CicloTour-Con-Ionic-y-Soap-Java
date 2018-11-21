@@ -1,0 +1,14 @@
+{
+  "name": "loginList",
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies": [{
+    "path": "/restheroku",
+    "proxyUrl": "https://ciclotour-2018.herokuapp.com/"
+  }, {
+    "path": "/wsciclotour",
+    "proxyUrl": "http://109.74.193.109:8080"
+  }],
+  "type": "ionic-angular"
+}

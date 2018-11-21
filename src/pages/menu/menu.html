@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button [menuToggle]="activeMenu">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Menu
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+
+  <ion-menu [content]="mycontent">
+    <ion-content>
+      <ion-list>
+        <button ion-button block type="submit" (click)="irHome()">Volver Home</button>
+        <button ion-button block type="submit" (click)="limpiarLidstaDeMunicipios()" [menuToggle]="activeMenu">Limpiar
+          Screen</button>
+        <button ion-button block type="submit" (click)="listarVertices()" [menuToggle]="activeMenu">Listar
+          Municipios</button>
+        <button ion-button block type="submit" (click)="newMunicipio()" [menuToggle]="activeMenu">Crear Municipio</button>
+        <button ion-button block type="submit" (click)="listarAristas()" [menuToggle]="activeMenu">Listar Rutas</button>
+        <button ion-button block type="submit" (click)="irCrearArista()">Crear Ruta</button>
+        <button ion-button block type="submit" (click)="irEditarArista()">Editar Peso Ruta</button>
+        <button ion-button block type="submit" (click)="irEliminarArista()">Eliminar Ruta</button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-refresher (ionRefresh)="recargar_municipios($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+      refreshingText="Refrescando..."></ion-refresher-content>
+  </ion-refresher>
+  <ion-refresher (ionRefresh)="getMunicipiosNew($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+      refreshingText="Refrescando..."></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-img style="width: 350px; height: 180px;" src="https://2.bp.blogspot.com/-Q-uWmE7E7Sk/V2iLtLpLxVI/AAAAAAAABCM/5_FuE9g8_U85ArJ0JvOAiS86MEGQNIxPgCLcB/s1600/CUATRO%2BCOLORES.png"></ion-img>
+  <p>Dale Click en Botón "MENU" para tener mejores opciones en crear, editar y muchas mas.</p>
+
+  <ion-list reorder="true">
+    <ion-item-sliding *ngFor="let listaV of listaDeVerticesArray">
+      <ion-item>
+        <ul>
+          <li>
+            <h2>{{listaV}}</h2>
+          </li>
+        </ul>
+      </ion-item>
+
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)="borrarVertice(listaV)">
+          <ion-icon name="trash"></ion-icon>
+          Borrar Vertice
+        </button>
+      </ion-item-options>
+
+      <ion-item-options side="left">
+        <button ion-button color="primary" (click)="editarVertice(listaV)">
+          <ion-icon name="md-refresh"></ion-icon>
+          Editar Vertice
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-list reorder="true">
+
+    <ion-item-sliding *ngFor="let listaA of listaDeAristasArray">
+
+      <ion-item>
+        <ul>
+          <li>
+            <h2>{{listaA}}</h2>
+          </li>
+        </ul>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
+<ion-nav [root]="rootPage" #mycontent></ion-nav>

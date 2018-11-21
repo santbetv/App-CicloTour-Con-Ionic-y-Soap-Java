@@ -1,0 +1,69 @@
+<!--
+  Generated template for the NewMunicipioPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Crear Municipio</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <!--<form (submit)="guardarMunicipios()" [formGroup]="form">
+    <ion-list>
+
+      <ion-item>
+        <ion-label fixed>Municipio</ion-label>
+        <ion-input formControlName="nombreMunicipio" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Posx</ion-label>
+        <ion-input formControlName="posx" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Posy</ion-label>
+        <ion-input formControlName="posy" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Descripcion</ion-label>
+        <ion-input formControlName="descripcion" type="text"></ion-input>
+      </ion-item>
+
+      <div padding>
+        <button ion-button block type="submit">Guardar En Heroku</button>
+      </div>
+    </ion-list>
+  </form>-->
+
+  <form (submit)="crearVertice()" [formGroup]="form">
+    <ion-list>
+      <ion-item>
+        <ion-label fixed>Municipio</ion-label>
+        <ion-input formControlName="nombreMunicipio" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Posx</ion-label>
+        <ion-input formControlName="posx" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Posy</ion-label>
+        <ion-input formControlName="posy" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Descripcion</ion-label>
+        <ion-input formControlName="descripcion" type="text"></ion-input>
+      </ion-item>
+
+      <div padding>
+        <button ion-button block type="submit">Guardar Municipio</button>
+      </div>
+    </ion-list>
+  </form>
+
+</ion-content>
